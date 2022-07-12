@@ -68,8 +68,7 @@ email.addEventListener("blur", () => {
   let emailVal = email.value;
   if (!regex.test(emailVal)) {
     email.style.color = "red";
-    document.getElementById("emailMsgr").innerHTML =
-      "Lastname must be 2-10 characters long and should not start with a number";
+    document.getElementById("emailMsgr").innerHTML = "Incorrect E-mail address";
     return false;
   } else {
     document.getElementById("emailMsgr").innerHTML = "";
@@ -98,7 +97,8 @@ login.addEventListener("click", (e) => {
   let password = document.getElementById("pwd").value;
   for (i = 0; i < objPeople.length; i++) {
     if (firstN == objPeople[i].username && password == objPeople[i].password) {
-      alert(firstN + " welcome to our Organization!");
+      document.querySelector(".successMessage").innerHTML =
+        firstN + " welcome to our Organization!";
     }
   }
   firstName.value = " ";
@@ -120,8 +120,10 @@ signUp.addEventListener("click", (e) => {
 
   let confrmpassword = document.getElementById("cnfpwd").value;
   if (newpassword === confrmpassword) {
-    alert("Thank you for signing up");
+    document.getElementById("SignUpWelcomeMsg").innerHTML =
+      "Thank you for signing up";
     passwordMsg.innerHTML = "";
+    document.querySelectorAll("form").values = " ";
   } else {
     passwordMsg.innerHTML = "Type the correct password";
     passwordMsg.style.color = "red";

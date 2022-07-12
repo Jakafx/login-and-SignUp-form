@@ -37,6 +37,9 @@ body {
 }
 
 .successMessage {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
     color: var(--color-success);
 }
 
@@ -69,7 +72,7 @@ body {
     border-color: var(--color-primary);
 }
 
-.button {
+.formbutton {
     background-color: var(--color-secondary);
     color: #ffffff;
     padding: 1rem;
@@ -81,11 +84,11 @@ body {
     outline: none;
 }
 
-.button:hover {
+.formbutton:hover {
     background-color: var(--color-primary-dark);
 }
 
-.button:active {
+.formbutton:active {
     transform: scale(0.98);
 }
 
@@ -129,4 +132,7 @@ select{
 }
 #SignUpWelcomeMsg{
     color: var(--color-success);
+    font-size:1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
